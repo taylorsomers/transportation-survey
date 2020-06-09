@@ -15,7 +15,7 @@ $(document).ready(function() {
       $("#work-responses").append(workTransportationMode + "<br>")
     });
     $("#fun-responses").show();
-    $("input:checkbox[name=fun-transportation]:checked).each(function() {
+    $("input:checkbox[name=fun-transportation]:checked").each(function() {
       const funTransportationMode = $(this).val();
       $("#fun-responses").append(funTransportationMode + "<br>");
     });
