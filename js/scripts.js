@@ -7,7 +7,15 @@
 // UI Logic
 
 $(document).ready(function() {
-
+  $("form#transportation_survey").submit(function() {
+    even.preventDefault();
+    $("#work-responses").show();
+    $("input:checkbox[name=work-transportation]:checked").each(function() {
+      const workTransportationMode = $(this).val();
+      $("#work-responses").append(workTransportationMode + "<br>")
+    });
+    $("#transportation_survey").hide();
+  });
 });
 
 // End UI Logic
